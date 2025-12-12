@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icecube 的主页</title>
+    <style>
+        /* === 全局样式 === */
+        body {
+            background-color: #121212; /* 深色背景 */
+            color: #ffffff;
+            font-family: "Microsoft YaHei", sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* === 顶部大标题 === */
+        header {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #1e3c72 0%, #121212 100%);
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            /* 冰块文字特效 */
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            text-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff; /* 蓝色发光 */
+        }
+
+        .subtitle {
+            color: #888;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* === 内容容器 === */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* === 媒体网格 (照片和视频) === */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* === 卡片样式 === */
+        .card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* 悬停上浮 */
+            box-shadow: 0 10px 20px rgba(0, 191, 255, 0.2);
+        }
+
+        /* 图片和视频自适应 */
+        img, video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* 裁剪填充，保证整齐 */
+            display: block;
+        }
+
+        .caption {
+            padding: 15px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* === 底部 === */
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            color: #555;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🧊 ICECUBE</h1>
+        <div class="subtitle">欢迎来到 Icecube 的个人世界</div>
+    </header>
+
+    <div class="container">
+        
+        <!-- 这里写一段自我介绍 -->
+        <p style="font-size: 1.2rem; line-height: 1.6;">
+            这里是我的个人空间。<br>
+            我喜欢 dg、dg和分享fq。<br>
+            👇 下面是我的精彩瞬间 👇
+        </p>
+
+        <!-- === 相册与视频区域 === -->
+        <div class="gallery">
+            
+            <!-- 第1张照片 (必须把你的照片命名为 photo1.jpg) -->
+            <div class="card">
+                <img src="photo1.jpg" alt="我的照片1">
+                <div class="caption">📸 这是我在最帅的时候</div>
+            </div>
+
+            <!-- 第2张照片 -->
+            <div class="card">
+                <img src="photo2.jpg" alt="我的照片2">
+                <div class="caption">📸 这是我的颜值</div>
+            </div>
+
+            <!-- 第1个视频 (必须把你的视频命名为 video1.mp4) -->
+            <div class="card">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    您的浏览器不支持播放视频。
+                </video>
+                <div class="caption">🎬 宝贝哥帅吗</div>
+            </div>
+            
+            <!-- 你可以复制上面的 <div class="card">...</div> 来添加更多 -->
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Icecube Website. Hosted on GitHub Pages.
+    </footer>
+
+</body>
+</html>
